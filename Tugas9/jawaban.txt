@@ -1,9 +1,7 @@
-***Soal 1***
-    Membuat Databse Baru
-        CREATE DATABASE myshop;
+*Soal Nomor Satu*
+     CREATE DATABASE myshop;
 
-***Soal 2***
-    Membuat Tabel dalam database
+*Soal Nomor Dua*
 a.users
 CREATE TABLE users (
     id int PRIMARY KEY AUTO_INCREMENT,
@@ -29,8 +27,7 @@ CREATE TABLE items(
     FOREIGN KEY(categories_id) REFERENCES categories(id)
     )
 
- ***Soal 3***
-    Membuat Data pada table   
+ *Soal Nomor Tiga*
 a. Tabel users
      INSERT INTO users (name,email,password) VALUES ('Raihan Batsar Adani', 'raihanbatsar074@gmail.com','raihan456');
      INSERT INTO users (name, email, password) VALUES ('Jane Doe', ' jane@doe.com', 'jenita123');
@@ -51,24 +48,20 @@ c. Tabel items
     ('Uniklooh', 'baju keren dari brand ternama', '500000', '50', '2'),
     ('IMHO Watch', 'jam tangan anak yang jujur banget', '2000000', '10', '1');
 
-***Soal 4***
+*Soal Nomor Empat*
 a. Mengambil Data users 
-* Menampilkan Semua data Pada Tabel users kecuali password
     SELECT name,email
     FROM users;
 
 b. Mengambil Data items
-* Menampilkan data item pada table items yang memiliki harga di atas 1000000 (1 juta)
     SELECT * FROM items
     WHERE price > 1000000;
-* Menampilkan data item pada tabel items yang name nya serupa dengan keyword "Uniklooh" 
+ 
     SELECT * FROM items
     WHERE name LIKE 'Uniklooh';
 
 c. Menampilkan data items join dengan kategori
-* Menampilkan data items yang dilengkapi dengan data nama kategori di masing-masing items
-
-    SELECT
+     SELECT
         items.name,
         items.description,
         items.price,
@@ -82,10 +75,7 @@ c. Menampilkan data items join dengan kategori
     ON
         items.categories_id = categories.id;
 
-***Soal No 5***
-
-# Mengubah data pada tabel items untuk item dengan nama sumsang b50 harganya (price) menjadi 2500000.
-
+*Soal Nomor Lima*
     UPDATE items
     SET price = '2500000'
     WHERE id = 1;

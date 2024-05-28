@@ -1,7 +1,9 @@
-<html>
-  <body>
-    <h2>Buat Account Baru!</h2>
-    <h4>Sign Up Form </h4>
+@extends('layouts.master')
+@section('title')
+Buat Account Baru   
+@endsection
+@section('content')
+<h4>Sign Up Form </h4>
     <form action="/welcome" method="post">
         @csrf
       <label for="firstname">First name:</label><br><br>
@@ -32,6 +34,7 @@
       <label for="bio">Bio:</label><br><br>
       <textarea id="bio" name="bio" rows="10" cols="30"></textarea><br>
       <input type="submit" value="Sign Up">
-    </form>
- </body>
-</html>
+    </form>    
+@endsection
+
+
